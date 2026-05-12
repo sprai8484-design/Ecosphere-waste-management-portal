@@ -1,0 +1,178 @@
+/* LOGIN PAGE MODERN STYLE */
+.login-section {
+  min-height: calc(100vh - 140px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d1fae5, #ecfdf5);
+  animation: backgroundShift 15s ease infinite;
+}
+
+/* Animate background gradient */
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-container {
+  display: flex;
+  width: 90%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  animation: fadeIn 1s ease forwards;
+}
+
+.login-illustration {
+  flex: 1;
+  background: #d1fae5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-illustration img {
+  max-width: 80%;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.login-card {
+  flex: 1;
+  padding: 40px 30px;
+}
+
+.login-card h1 {
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.login-card p {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.login-error {
+  text-align: center;
+  color: #e53e3e;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Floating label input */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 8px rgba(27,127,92,0.25);
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #64748b;
+  transition: 0.3s ease all;
+  font-size: 0.95rem;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: var(--primary);
+  background: #fff;
+  padding: 0 4px;
+}
+
+/* Password peek */
+.password-wrapper {
+  position: relative;
+}
+
+.peek-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.peek-btn:hover { color: var(--primary); }
+
+/* Login button */
+.btn-login {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #1b7f5c, #065f46);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(27,127,92,0.35);
+}
+
+/* Footer link */
+.login-footer {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.login-footer a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Card fade-in */
+@keyframes fadeIn {
+  0% {opacity: 0; transform: translateY(30px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+
+/* Illustration float */
+@keyframes float {
+  0%,100%{ transform: translateY(0);}
+  50%{ transform: translateY(-10px);}
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .login-container { flex-direction: column; }
+  .login-illustration { width: 100%; padding: 30px; }
+  .login-card { padding: 30px 20px; }
+}

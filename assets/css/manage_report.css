@@ -1,0 +1,235 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #1b7f5c;
+    --primary-hover: #145e44;
+    --danger: #ef4444;
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+.dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    margin-bottom: 30px;
+}
+
+.dash-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: #fff;
+    background: var(--danger);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.logout-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
+}
+
+/* Stats/Action Section */
+.stats {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s;
+    box-shadow: 0 10px 15px -3px rgba(27, 127, 92, 0.2);
+}
+
+.btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(27, 127, 92, 0.3);
+}
+
+/* Reports Section */
+.reports {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Table Styling */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th {
+    background: #f8fafc;
+    padding: 16px;
+    text-align: left;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border-color);
+    font-weight: 600;
+}
+
+/* Perfect Vertical Alignment fix */
+td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle; /* Sabse important: photo aur text ko ek line me laane ke liye */
+    color: var(--text-main);
+    font-size: 0.95rem;
+}
+
+tr:hover td {
+    background-color: #fcfdfe;
+}
+
+/* Status Chip - Fixed for Alignment */
+.status {
+    display: inline-flex; /* Flex se text box ke center me rehta hai */
+    align-items: center;
+    justify-content: center;
+    padding: 6px 0;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 100px; /* Sab badges ki width ek barabar */
+    height: 30px; /* Fixed height for consistency */
+}
+
+.status.pending { background-color: #fef9c3; color: #a16207; border: 1px solid #fde047; }
+.status.approved { background-color: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+.status.rejected { background-color: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+
+/* Image - Fixed for Alignment */
+img {
+    width: 60px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block; /* Extra space hatane ke liye */
+    margin: 0;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(2.2);
+    z-index: 10;
+    position: relative;
+    cursor: zoom-in;
+}
+
+/* Description truncation */
+td:nth-child(2) {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+td:hover:nth-child(2) {
+    white-space: normal;
+    cursor: help;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .dash-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+/* --- STEP 1: Table Cells ko Center karein --- */
+td {
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+    /* Yeh line Status ko Image ke bilkul samne (center) layegi */
+    vertical-align: middle !important; 
+}
+
+/* --- STEP 2: Image ko Clean karein --- */
+td img {
+    display: block; /* Extra space hatane ke liye */
+    width: 65px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0; 
+}
+
+/* --- STEP 3: Status Badge ko Sahi karein --- */
+.status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Pehle se jo width/height hai rehne dein */
+
+    /* 1. Margin se niche dhaklein */
+    margin-top: 15px !important; 
+
+    /* 2. Agar margin kaam na kare, toh transform use karein */
+    transform: translateY(10px); 
+}
+/* Status Colors */
+.status.pending {
+    background-color: #fef9c3;
+    color: #a16207;
+    border: 1px solid #fde047;
+}
+
+.status.approved {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+}

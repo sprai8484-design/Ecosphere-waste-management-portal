@@ -1,0 +1,224 @@
+/* ===============================
+   GLOBAL BACKGROUND
+================================= */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to bottom, #e8f5e9 0%, #f4f6f9 40%);
+}
+
+/* ===============================
+   PAGE CONTAINER
+================================= */
+.feed-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px 60px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #1b5e20;
+    margin-bottom: 40px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* ===============================
+   MODERN HORIZONTAL CARD
+================================= */
+.feed-card {
+    display: flex;
+    gap: 25px;
+    background: #ffffff;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.feed-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Subtle right accent glow */
+.feed-card.resolved {
+    background: linear-gradient(to right, #ffffff 80%, #e8f5e9 100%);
+}
+
+.feed-card.approved {
+    background: linear-gradient(to right, #ffffff 80%, #e3f2fd 100%);
+}
+
+/* ===============================
+   LEFT IMAGE
+================================= */
+.feed-image {
+    flex: 0 0 300px;
+}
+
+.feed-image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+/* ===============================
+   RIGHT CONTENT
+================================= */
+.feed-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===============================
+   HEADER SECTION
+================================= */
+.feed-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.feed-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.reported-by {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+}
+
+/* ===============================
+   STATUS BADGES
+================================= */
+.status {
+    padding: 6px 16px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Approved (Verified Look) */
+.status.approved {
+    background: #e3f2fd;
+    color: #1565c0;
+}
+
+/* Resolved (Success Look) */
+.status.resolved {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Pending */
+.status.pending {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+/* ===============================
+   DESCRIPTION
+================================= */
+.description {
+    margin: 15px 0;
+    color: #444;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+/* ===============================
+   INFO SECTION
+================================= */
+.feed-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #777;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+    margin-top: auto;
+}
+
+/* ===============================
+   ADMIN RESOLUTION SECTION
+================================= */
+.admin-section {
+    background: #f4faf6;
+    padding: 15px;
+    margin-top: 18px;
+    border-radius: 10px;
+}
+
+.admin-section h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #2e7d32;
+}
+
+.resolution-image img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================= */
+@media (max-width: 900px) {
+    .feed-card {
+        flex-direction: column;
+    }
+
+    .feed-image {
+        width: 100%;
+    }
+
+    .feed-image img {
+        height: 240px;
+    }
+}
+
+/* ===== RESOLUTION PROOF SECTION ===== */
+.resolution-proof {
+    margin-top: 20px;
+    padding: 18px;
+    background: #f1fff4;
+    border: 1px solid #b7e4c7;
+    border-radius: 10px;
+}
+
+.resolution-header {
+    font-weight: 600;
+    color: #1b5e20;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.resolution-note p {
+    margin: 6px 0 14px 0;
+    color: #333;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.resolution-image-proof img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}

@@ -1,0 +1,138 @@
+/* Ecosphere Modern Split Layout */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.report-section {
+    padding: 60px 20px;
+    background-color: #f8fafc;
+    min-height: 80vh;
+}
+
+.report-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.modern-form {
+    display: flex;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid #e2e8f0;
+}
+
+/* --- Left Side --- */
+.panel-left {
+    flex: 1;
+    padding: 40px;
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panel-header h3 {
+    color: #1b7f5c;
+    border-bottom: 2px solid #2ecc71;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.preview-box img {
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-style: italic;
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-top: 20px;
+}
+
+/* --- Right Side --- */
+.panel-right {
+    flex: 1.4;
+    padding: 40px;
+}
+
+.form-title {
+    color: #1b7f5c;
+    margin-bottom: 35px;
+    font-size: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-row label {
+    flex: 0.8;
+    font-weight: 600;
+    color: #1b7f5c;
+    font-size: 0.95rem;
+}
+
+.form-row input, .form-row select, .form-row textarea {
+    flex: 1.5;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+    outline: none;
+    border-color: #1b7f5c;
+    box-shadow: 0 0 0 3px rgba(27, 127, 92, 0.1);
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #1b7f5c;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #145e44;
+}
+
+/* Feedback messages */
+.msg { padding: 15px; border-radius: 8px; margin-bottom: 20px; text-align: center; font-weight: 500; }
+.success { background: #dcfce7; color: #15803d; border: 1px solid #bdf0cc; }
+.error { background: #fee2e2; color: #b91c1c; border: 1px solid #fecaca; }
+
+/* Responsive */
+@media (max-width: 850px) {
+    .modern-form { flex-direction: column; }
+    .panel-left { border-right: none; border-bottom: 1px solid #e2e8f0; }
+}

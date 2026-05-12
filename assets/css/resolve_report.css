@@ -1,0 +1,108 @@
+/* Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* Main Wrapper */
+.container {
+    max-width: 750px;
+    margin: 70px auto;
+    background: #ffffff;
+    padding: 45px 50px;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Page Title */
+h2 {
+    font-size: 24px;
+    margin-bottom: 35px;
+    color: #2c2c2c;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Report Info Block */
+.report-info {
+    background: #fafafa;
+    padding: 20px 22px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    margin-bottom: 35px;
+}
+
+.report-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #444;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Inputs */
+textarea,
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Focus */
+textarea:focus,
+input[type="file"]:focus {
+    border-color: #28a745;
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    margin-top: 10px;
+    padding: 12px 22px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.98);
+}

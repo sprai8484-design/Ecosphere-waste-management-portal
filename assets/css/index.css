@@ -1,0 +1,325 @@
+/* --- ECOSPHERE VIBE PALETTE --- */
+:root {
+    --eco-forest-deep: #213A30; 
+    --eco-river-teal: #2A6F75;  
+    --eco-navy-dark: #0f172a;   
+    --eco-leaf-light: #f8fbfc;  
+    --eco-text-muted: #576574;  
+}
+
+/* =========================================
+   1. SLIDER CSS (100% UNTOUCHED & SAFE)
+   ========================================= */
+.hero-slider {
+    width: 100%;
+    height: 70vh; 
+    position: relative;
+    overflow: hidden;
+    background-color: #000; 
+}
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.swiper-slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2; 
+    text-align: center;
+    color: #fff;
+}
+
+.slide-content h1 {
+    font-size: 3rem;
+    color: #fff; 
+    margin-bottom: 10px;
+}
+
+.slide-1 { background-image: url('../images/webreuse.jpg'); }
+.slide-2 { background-image: url('../images/reshop.jpg'); }
+.slide-3 { background-image: url('../images/webreuse1.jpg'); }
+.slide-4 { background-image: url('../images/volunteers.jpg'); }
+
+.swiper-pagination-bullet-active {
+    background: #f0a830 !important; 
+}
+
+/* =========================================
+   2. WHY ECOSPHERE (STRICT GRID LAYOUT)
+   ========================================= */
+.why-ecosphere-section {
+    padding: 60px 0;
+    background-color: var(--eco-leaf-light); 
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title h2 {
+    color: var(--eco-navy-dark);
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: var(--eco-text-muted);
+}
+
+.strict-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.strict-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06); 
+    border-bottom: 4px solid var(--eco-river-teal); 
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.strict-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+.strict-image-box {
+    width: 100%;
+    height: 220px; 
+    overflow: hidden;
+}
+
+.strict-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.strict-card:hover .strict-image-box img {
+    transform: scale(1.05);
+}
+
+.strict-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.strict-content h3 {
+    color: var(--eco-forest-deep); 
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.strict-content p {
+    color: var(--eco-text-muted);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; 
+}
+
+.vibe-link {
+    color: var(--eco-river-teal);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: auto;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.vibe-link:hover {
+    color: var(--eco-forest-deep);
+}
+
+/* =========================================
+   3. ABOUT ECOSPHERE (MODERN MIRRORED LAYOUT)
+   ========================================= */
+.about-ecosphere {
+    padding: 80px 0;
+    background: #ffffff; /* Separates the two gray-tinted sections */
+}
+
+.about-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 350px;
+    position: relative;
+}
+
+/* Decorative offset box */
+.about-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--eco-river-teal);
+    top: 20px;
+    left: -20px;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+    position: relative;
+    z-index: 1;
+    display: block;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text .subtitle {
+    color: var(--eco-river-teal);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: var(--eco-navy-dark);
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.about-text p {
+    color: var(--eco-text-muted);
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.btn-minimal {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--eco-river-teal);
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(42, 111, 117, 0.2);
+}
+
+.btn-minimal:hover {
+    background: var(--eco-forest-deep);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(33, 58, 48, 0.3);
+}
+
+/* =========================================
+   4. TYPES OF WASTE (ICON GRID)
+   ========================================= */
+.waste-types-section {
+    padding: 60px 0;
+    background: var(--eco-leaf-light); 
+}
+
+.waste-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.waste-item {
+    background: #ffffff; 
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.waste-item:hover {
+    transform: translateY(-5px);
+}
+
+.waste-icon {
+    font-size: 2.5rem;
+    color: var(--eco-river-teal); 
+    margin-bottom: 15px;
+}
+
+.waste-item h3 {
+    color: var(--eco-forest-deep);
+    margin-bottom: 10px;
+}
+
+.waste-item p {
+    color: var(--eco-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* =========================================
+   5. RESPONSIVE UTILITIES
+   ========================================= */
+@media (max-width: 992px) {
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image::before {
+        display: none; 
+    }
+    .about-image {
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide-content h1 {
+        font-size: 2rem;
+    }
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+}

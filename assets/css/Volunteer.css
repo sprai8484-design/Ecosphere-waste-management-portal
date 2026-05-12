@@ -1,0 +1,124 @@
+/* Ensure the page starts below the sticky navbar */
+.volunteer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 60px; /* Top padding (100px) pushes content below sticky navbar */
+    min-height: 80vh;
+}
+
+/* Page Title and Intro */
+.volunteer-container h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    color: #1e3f20;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.vol-intro-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* TESTIMONIALS SECTION */
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.testimonial-card {
+    background: white;
+    width: 280px;
+    padding: 22px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* VOLUNTEER FORM SECTION */
+.volunteer-form-section {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 40px;
+    padding: 35px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.volunteer-form-section h2 {
+    color: #1e3f20;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.volunteer-form-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.volunteer-form-section input,
+.volunteer-form-section textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1.5px solid #b7c9b7;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    outline: none;
+}
+
+.volunteer-form-section input:focus,
+.volunteer-form-section textarea:focus {
+    border-color: #27ae60;
+    box-shadow: 0 0 5px rgba(39, 174, 96, 0.2);
+}
+
+.btn-submit {
+    background: #27ae60; /* Adjust to match your forest-medium color */
+    color: white;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background: #1e3f20;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .volunteer-container {
+        padding-top: 80px;
+    }
+    .volunteer-container h1 {
+        font-size: 2rem;
+    }
+}

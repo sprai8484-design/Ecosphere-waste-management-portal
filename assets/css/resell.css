@@ -1,0 +1,435 @@
+/* style.css */
+
+/* 1. Global Variables - The exact Ecosphere Color Palette */
+:root {
+    --mint-bg: #eef7f2;      /* Light background */
+    --forest-green: #00332c;  /* Primary text and buttons */
+    --white: #ffffff;
+    --text-muted: #555;
+    --transition: all 0.3s ease;
+}
+
+/* 2. Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--mint-bg);
+    color: var(--forest-green);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    width: 100%;
+}
+
+/* 3. Navigation Bar (Full Width) */
+
+
+/* 4. Hero Section (Full Height) */
+/* --- Starting Section (Hero) Alignment --- */
+
+/* --- Updated Hero Section for Full Width --- */
+
+.hero {
+    display: flex;
+    justify-content: space-between; /* Text left mein aur image right mein push karega */
+    align-items: center;
+    gap: 40px; 
+    width: 100%;             /* Poori width use karega */
+    max-width: 100%;         /* Container ki limit hata di */
+    margin: 0; 
+    padding: 60px 5%;        /* Side mein thodi padding taaki text chipke nahi */
+    min-height: 80vh;
+}
+
+.hero-content {
+    flex: 1;                 /* 50% area text ko milega */
+    max-width: 600px;        /* Text ko zyada phailne se rokega for readability */
+}
+
+/* Container that holds the image */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* Ensure the container has a defined height to fill */
+    height: 500px; 
+    border-radius: 12px;
+    overflow: hidden; /* This crops the image to the border-radius */
+    background: none; /* Removes any background color showing behind */
+}
+
+/* The actual image inside the container */
+.hero-image img {
+    width: 100% !important;   /* Force image to fill container width */
+    height: 100% !important;  /* Force image to fill container height */
+    object-fit: cover;        /* Covers the area without stretching (crops edges) */
+    object-position: center;  /* Keeps the center of the photo visible */
+    border-radius: 12px;
+    display: block;
+}
+
+/* Button position fix */
+.hero-content .btn-pill {
+    display: inline-block;
+}
+
+/* Button Styling to match the 'Start Selling' pill */
+.btn-pill {
+    background: var(--forest-green);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 50px;     /* Makes it a pill shape */
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+/* 1. The Container: Needs to expand to fill the right side */
+.hero-image {
+    flex: 1.2;               /* Takes up more space than the text side */
+    display: flex;
+    height: 500px;           /* Set a consistent height for the hero area */
+    border-radius: 20px;     /* Match the rounded look from your reference */
+    overflow: hidden;        /* Crops the image to the rounded corners */
+    background: transparent; /* Removes any leftover green background */
+}
+
+/* 2. The Image: Needs to fill the container 100% */
+.hero-image img {
+    width: 100% !important;  /* Forces it to fill the entire red highlighted area */
+    height: 100% !important; /* Matches the 500px height of the container */
+    object-fit: cover;       /* Magic property: crops the image to fit the box perfectly */
+    object-position: center; /* Ensures the main subject of the photo stays visible */
+    display: block;
+}
+
+/* --- Is section ko "5. Services & Marketplace Cards" ki jagah replace karein --- */
+
+/* 5. Generic Grid System */
+section {
+    width: 100%;
+    padding: 80px 5%;
+}
+/* --- CSS Update for Perfect Card Spacing --- */
+
+/* 1. Grid ko compact banane ke liye */
+.grid-3 {
+    display: grid;
+    /* Columns ko fixed width (320px) di hai taaki gap consistent rahe */
+    grid-template-columns: repeat(auto-fit, 320px); 
+    gap: 1.5rem; /* Gap kam kiya gaya hai */
+    justify-content: center; /* Saare cards ko center mein lane ke liye */
+    width: 100%;
+    max-width: 1100px; /* Poore grid container ki width restrict ki hai */
+    margin: 0 auto; /* Grid ko page ke center mein rakhne ke liye */
+}
+
+/* 2. Card ki width ko grid ke hisaab se adjust kiya */
+.services .card {
+    background: var(--white);
+    padding: 1.5rem; /* Padding thodi kam ki hai for better look */
+    border-radius: 20px;
+    width: 100%; /* Card ab 320px column ko poora fill karega */
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    text-align: center;
+}
+
+/* 3. Image height thodi kam ki hai compact look ke liye */
+.services .card img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1.2rem;
+}/* --- Is section ko "5. Services & Marketplace Cards" ki jagah replace karein --- */
+
+/* 5. Generic Grid System */
+section {
+    width: 100%;
+    padding: 80px 5%;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+/* --- NEW: Interactive Services Section (Amazon Style) --- */
+.services {
+    text-align: center;
+    background-color: var(--mint-bg);
+}
+
+.services .section-tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.services .section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 50px;
+}
+
+.services .card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 350px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.services .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 51, 44, 0.1);
+}
+
+.services .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.services .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.services .card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    min-height: 50px;
+}
+
+.services .card .btn-pill {
+    width: 100%;
+    background: var(--forest-green);
+    border: 2px solid var(--forest-green);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.services .card .btn-pill:hover {
+    background: transparent;
+    color: var(--forest-green);
+}
+
+/* --- REMAINS SAME: Marketplace Cards (To keep them as they were) --- */
+.marketplace .card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    width: fit-content;
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.marketplace .card img {
+    width: 5.5cm;
+    height: 5.5cm;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: var(--forest-green);
+}
+
+
+/* 6. Why Choose Us (Dark Banner Style) */
+.why-choose-banner {
+    background: var(--forest-green);
+    color: var(--white);
+    padding: 80px 10%;
+    width: 100%;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.banner-text {
+    flex: 1.2;
+}
+
+.banner-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.banner-text p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.banner-image {
+    flex: 0.8;
+}
+
+.banner-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 0px rgba(255, 255, 255, 0.1); /* Reference jaisa thoda depth */
+}
+
+/* Icons and Small Features */
+.banner-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feat-item i {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #10b981; /* Accent Mint Green */
+}
+
+.feat-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.feat-item p {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner-features {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+/* 7. Sliding Gallery (5.5cm Images) */
+.slider-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.slider-track {
+    display: flex;
+    width: fit-content;
+}
+
+.slider-track img {
+    width: 5.5cm;
+    height: 5.5cm;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+/* 8. FAQ Accordion */
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding: 1.5rem 0;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--forest-green);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 1rem;
+    color: var(--text-muted);
+}
+
+/* Marketplace Categories Specific Styling */
+.marketplace-categories .grid-3 {
+    display: grid;
+    /* Exactly 3 columns on Desktop */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* Mobile par ye 1 column ho jayega automatically */
+@media (max-width: 768px) {
+    .marketplace-categories .grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.marketplace-categories .card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+}
+
+.marketplace-categories .card:hover {
+    transform: translateY(-10px);
+}
+
+.marketplace-categories .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1.2rem;
+}
